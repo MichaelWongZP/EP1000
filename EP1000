@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: none;
+  background-color: #666666;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: #666666;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 18px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #555555;
+  color: #d0d0d0;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: none;
+  border-top: none;
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#ffffff">
+
+<h2 class="custom" style="text-align:center;">Michael's Site</h2>
+<p class="custom" style="text-align:center;">Navigate Below:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">HOME</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">PROJECTS</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">ABOUT</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>Project Dump</h3>
+  <p>I'll be dumping the documentation of projects that I,ve realised here.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+<h3>Insert Project Name</h3>
+<p>Insert Project Docs</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+<h3>About Me</h3>
+<p>I came into existence 20 years ago and took my first breath the next year. My makers gave me the name "Michael Wong". I came to SP after spending a year in CJC and I'm in progress of getting a diploma in mechanical engineering. I am a part of SP Strings and look forward to teach prospect violinists in the future. I chose this module because I love fabricating and realising my daydreams.</p>
+<p>If you want to see something, checkout my <a href="https://tinyurl.com/ff22eys4">Instagram</a>.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
